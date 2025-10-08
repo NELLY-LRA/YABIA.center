@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{str_replace('_','_', app()->getLocale())}}">
+<html lang="{{ app()->getLocale() }}" >
 
 <head>
     <meta charset="utf-8">
@@ -88,11 +88,13 @@
 
                         <!-- Info List -->
                         <ul class="info-list">
-                            <li><a href="#"><span class="icon fa-solid fa-phone fa-fw"></span>{!! __('app.phone') !!} </a></li>
+                            <li><a href="#"><span
+                                        class="icon fa-solid fa-phone fa-fw"></span>{!! __('app.phone') !!} </a></li>
                             <li><a href="#"><span
                                         class="icon fa-solid fa-envelope fa-fw"></span>{!! __('app.email') !!}</a>
                             </li>
-                            <li><a href="#"><span class="icon fa-solid fa-map fa-fw"></span>{!! __('app.address') !!}</a></li>
+                            <li><a href="#"><span
+                                        class="icon fa-solid fa-map fa-fw"></span>{!! __('app.address') !!}</a></li>
                         </ul>
 
                         <!-- Social Box -->
@@ -121,10 +123,11 @@
                         <div class="upper-right">
                             <div class="nav-outer d-flex justify-content-between align-items-center flex-wrap">
 
-                                  <!-- Main Menu -->
+                                <!-- Main Menu -->
                                 <nav class="main-menu show navbar-expand-md">
                                     <div class="navbar-header">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                            data-target="#navbarSupportedContent">
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
@@ -137,13 +140,17 @@
                                             <li><a href="{{ route('about') }}">{{ __('app.about') }}</a></li>
                                             <li class="dropdown"><a href="#">{{ __('app.services') }}</a>
                                                 <ul>
-                                                    <li><a href="{{ route('service') }}">{{ __('app.services') }}</a></li>
-                                                    <li><a href="{{ route(name: 'service-detail') }}">{{ __('app.service_detail') }}</a></li>
+                                                    <li><a href="{{ route('service') }}">{{ __('app.services') }}</a>
+                                                    </li>
+                                                    <li><a
+                                                            href="{{ route(name: 'service-detail') }}">{{ __('app.service_detail') }}</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li><a href="{{ route('contact') }}">{{ __('app.contact') }}</a></li>
                                             <li>
-                                                <a class="btn-style-three theme-btn btn-item" href="#choose-one" style="padding: 6px 12px; font-size: 14px; display: flex;">
+                                                <a class="btn-style-three theme-btn btn-item" href="#choose-one"
+                                                    style="padding: 6px 12px; font-size: 14px; display: flex;">
                                                     <div class="btn-wrap">
                                                         <span class="text-one">{{ __('app.book_appointment') }}</span>
                                                         <span class="text-two">{{ __('app.book_appointment') }}</span>
@@ -159,17 +166,29 @@
 
 
                                     <!-- Language -->
-                                    <div class="language dropdown">
-                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu1"
-                                            data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                class="fa-solid fa-globe fa-fw"></i>{{ __('app.english') }} &nbsp;<span
-                                                class="fa fa-angle-down"></span></button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="{{ url('lang/en') }}" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">{{ __('app.english') }}</a>
-                                            </li>
-                                            <li><a href="{{ url('lang/fr') }}" class="{{ app()->getLocale() == 'fr' ? 'active' : '' }}">{{ __('app.french') }}</a></li>
-                                        </ul>
-                                    </div>
+                        <div class="language dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenu1"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-globe fa-fw"></i>{{ __('app.lang') }} &nbsp;
+        <span class="fa fa-angle-down"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li>
+            <a href="{{ route('change.lang', 'fr') }}"
+               class="{{ app()->getLocale() == 'fr' ? 'active' : '' }}">
+               {{ __('app.french') }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('change.lang', 'en') }}"
+               class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">
+               {{ __('app.english') }}
+            </a>
+        </li>
+    </ul>
+</div>
+
+
 
 
                                     <!-- Mobile Navigation Toggler -->
@@ -206,17 +225,17 @@
                             <div class="outer-box d-flex align-items-center">
 
                                 <!-- Language -->
-                                    <div class="language dropdown">
-                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu1"
-                                            data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                class="fa-solid fa-globe fa-fw"></i>{{ __('app.english') }} &nbsp;<span
-                                                class="fa fa-angle-down"></span></button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="{{ url('lang/en') }}">{{ __('app.english') }}</a>
-                                            </li>
-                                            <li><a href="{{ url('lang/fr') }}">{{ __('app.french') }}</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="language dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu1"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><i
+                                            class="fa-solid fa-globe fa-fw"></i>{{ __('app.english') }} &nbsp;<span
+                                            class="fa fa-angle-down"></span></button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                        <li><a href="{{ url('lang/en') }}">{{ __('app.english') }}</a>
+                                        </li>
+                                        <li><a href="{{ url('lang/fr') }}">{{ __('app.french') }}</a></li>
+                                    </ul>
+                                </div>
 
 
 
@@ -238,8 +257,8 @@
                 <div class="menu-backdrop"></div>
                 <div class="close-btn"><span class="icon flaticon-020-x-mark"></span></div>
                 <nav class="menu-box">
-                    <div class="nav-logo"><a href="{{ route('welcome') }}"><img src="images/logo.png" alt=""
-                                title=""></a>
+                    <div class="nav-logo"><a href="{{ route('welcome') }}"><img src="images/logo.png"
+                                alt="" title=""></a>
                     </div>
 
                     <div class="menu-outer">
@@ -260,7 +279,8 @@
                         <h3 class="cta-one_heading">{{ __('app.cta_heading') }}</h3>
                     </div>
                     <div class="right-box">
-                        <a class="cta-one_btn theme-btn" href="{{ route('contact') }}">{{ __('app.cta_button') }}</a>
+                        <a class="cta-one_btn theme-btn"
+                            href="{{ route('contact') }}">{{ __('app.cta_button') }}</a>
                     </div>
                 </div>
             </div>
@@ -285,7 +305,8 @@
                                                     alt="" /></a>
                                         </div>
                                         <div class="text"> {{ __('app.footer_text') }}</div>
-                                        <a href="{{ route('service') }}" class="theme-btn about-btn">{{ __('app.learn_mor') }}</a>
+                                        <a href="{{ route('service') }}"
+                                            class="theme-btn about-btn">{{ __('app.learn_mor') }}</a>
                                     </div>
                                 </div>
 
@@ -300,10 +321,10 @@
                                             <li><a href="https://www.facebook.com/profile.php?id=100071289942844"
                                                     class="fa-brands fa-facebook-f fa-fw"></a></li>
 
-                                             <li><a href="#" class="fa-brands fa-linkedin fa-fw"></a></li>
-                            <li><a href="#" class="fa-solid fa-instagram fa-fw"></a></li>
+                                            <li><a href="#" class="fa-brands fa-linkedin fa-fw"></a></li>
+                                            <li><a href="#" class="fa-solid fa-instagram fa-fw"></a></li>
 
-                                                  </ul>
+                                        </ul>
                                         <!-- End Social Box -->
 
                                     </div>
@@ -326,7 +347,7 @@
                                             </li>
                                         </ul>
                                         <div class="timing">
-                                           {{ __('app.hours') }}
+                                            {{ __('app.hours') }}
                                         </div>
                                     </div>
                                 </div>
@@ -385,7 +406,8 @@
                 </div>
 
                 <div class="footer-bottom">
-                    <div class="copyright">2025 &copy;  {{ __('app.copyright') }} <a href="{{ route('about') }}"> {{ __('app.health_center') }}</a></div>
+                    <div class="copyright">2025 &copy; {{ __('app.copyright') }} <a href="{{ route('about') }}">
+                            {{ __('app.health_center') }}</a></div>
                 </div>
 
             </div>

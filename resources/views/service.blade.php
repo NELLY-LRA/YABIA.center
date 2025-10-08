@@ -3,10 +3,10 @@
     <!-- Page Title -->
     <section class="page-title" style="background-image:url(images/main-slider/masque-à-oxygène-38482604.jpg)">
         <div class="auto-container">
-            <h2>Nos Services</h2>
+            <h2>{{ __('app.page_title') }}</h2>
             <ul class="bread-crumb clearfix">
-               <li><a href="{{route('welcome')}}">Accueil</a></li>
-                <li>Services</li>
+               <li><a href="{{route('welcome')}}">{{ __('app.breadcrumb_home') }}</a></li>
+                <li>{{ __('app.breadcrumb_services') }}</li>
             </ul>
         </div>
     </section>
@@ -16,8 +16,8 @@
     <section class="service-two">
         <div class="auto-container">
             <div class="sec-title centered">
-                <div class="sec-title_title">Nos Services</div>
-                <h2 class="sec-title_heading"> Spécialités </h2>
+                <div class="sec-title_title">{{ __('app.page_title') }}</div>
+                <h2 class="sec-title_heading">{{ __('app.section_heading') }}</h2>
             </div>
             <div class="row clearfix">
 
@@ -28,15 +28,15 @@
                             <img src="images/resource/service-2.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-4.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Médecine Générale</h5>
+                                <h5 class="service-block_two-title">{{ __('app.general_medicine') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#medecine-generale">Médecine Générale</a>
+                                        <a href="{{ route('service-detail') }}#medecine-generale">{{ __('app.general_medicine') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">La Clinique offre des soins primaires...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#medecine-generale">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.general_medicine_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#medecine-generale">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -50,15 +50,15 @@
                             <img src="images/resource/service-3.jpeg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-5.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Consultation Prénatale</h5>
+                                <h5 class="service-block_two-title">{{ __('app.prenatal_consultation') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#consultation-prenatale">Consultation Prénatale</a>
+                                        <a href="{{ route('service-detail') }}#consultation-prenatale">{{ __('app.prenatal_consultation') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">Nos consultations prénatales assurent un suivi médical complet...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#consultation-prenatale">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.prenatal_consultation_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#consultation-prenatale">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -72,15 +72,15 @@
                             <img src="images/resource/service-4.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-6.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Laboratoire</h5>
+                                <h5 class="service-block_two-title">{{ __('app.laboratory') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#laboratoire">Laboratoire</a>
+                                        <a href="{{ route('service-detail') }}#laboratoire">{{ __('app.laboratory') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">Le laboratoire de la Clinique YABIA offre des services complets...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#laboratoire">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.laboratory_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#laboratoire">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -94,15 +94,15 @@
                             <img src="images/resource/service-5.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-7.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Pédiatrie</h5>
+                                <h5 class="service-block_two-title">{{ __('app.pediatrics') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#pediatrie">Pédiatrie</a>
+                                        <a href="{{ route('service-detail') }}#pediatrie">{{ __('app.pediatrics') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">Soins spécialisés pour les bébés et enfants...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#pediatrie">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.pediatrics_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#pediatrie">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -116,15 +116,15 @@
                             <img src="images/resource/service-6.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-31.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Kinésithérapie</h5>
+                                <h5 class="service-block_two-title">{{ __('app.physiotherapy') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#kinesitherapie">Kinésithérapie</a>
+                                        <a href="{{ route('service-detail') }}#kinesitherapie">{{ __('app.physiotherapy') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">Récupération de mobilité et bien-être...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#kinesitherapie">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.physiotherapy_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#kinesitherapie">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -138,15 +138,15 @@
                             <img src="images/resource/service-7.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-32.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Fecondation in vitro</h5>
+                                <h5 class="service-block_two-title">{{ __('app.in_vitro') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#fecondation in vitro">Fecondation in vitro</a>
+                                        <a href="{{ route('service-detail') }}#fecondation in vitro">{{ __('app.in_vitro') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">La fécondation in vitro (FIV) est une technique de procréation ...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#fecondation in vitro">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.in_vitro_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#fecondation in vitro">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -160,15 +160,15 @@
                             <img src="images/resource/service-8.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-33.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Gynecologie obstetrique</h5>
+                                <h5 class="service-block_two-title">{{ __('app.gynecology') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#gynecologie obstetrique">Gynecologie obstetrique</a>
+                                        <a href="{{ route('service-detail') }}#gynecologie obstetrique">{{ __('app.gynecology') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">Notre service de gynécologie-obstétrique accompagne les femmes à toutes les ...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#gynecologie obstetrique">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.gynecology_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#gynecologie obstetrique">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
@@ -182,15 +182,15 @@
                             <img src="images/resource/service-9.jpg" alt="" />
                             <div class="service-block_two-overlay">
                                 <div class="service-block_two-icon"><img src="images/icons/service-34.png" alt="" /></div>
-                                <h5 class="service-block_two-title">Chirurgie Generale</h5>
+                                <h5 class="service-block_two-title">{{ __('app.surgery') }}</h5>
                             </div>
                             <div class="service-block_two-overlay-two">
                                 <div class="service-two_overlay-content">
                                     <h5 class="service-block_two-title">
-                                        <a href="{{ route('service-detail') }}#chirurgie">Chirurgie Generale</a>
+                                        <a href="{{ route('service-detail') }}#chirurgie">{{ __('app.surgery') }}</a>
                                     </h5>
-                                    <div class="service-block_two-text">Notre service de chirurgie générale prend en charge les...</div>
-                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#chirurgie">Read more</a>
+                                    <div class="service-block_two-text">{{ __('app.surgery_text') }}</div>
+                                    <a class="service-block_two-more" href="{{ route('service-detail') }}#chirurgie">{{ __('app.read_more') }}</a>
                                 </div>
                             </div>
                         </div>
