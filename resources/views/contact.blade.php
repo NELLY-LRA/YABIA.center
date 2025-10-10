@@ -141,10 +141,11 @@
 <!-- Map One -->
 <section class="map-one">
     <div class="map-outer">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s"
-            allowfullscreen></iframe>
-    </div>
+         <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7083.974927799855!2d9.74059056546605!3d4.0917231904437585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwMDUnMjUuNiJOIDnCsDQ0JzQ0LjQiRQ!5e0!3m2!1sfr!2scm!4v1760001643667!5m2!1sfr!2scm"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 </section>
 <!-- End Map One -->
 

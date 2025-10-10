@@ -9,7 +9,7 @@ return [
     'book_appointment' => 'Prendre Rendez-vous',
     'english' => 'Anglais',
     'french' => 'Français',
-    'lang' => 'Anglais',
+    'lang' => 'Français',
     // Header Top
     'phone' => '(+237) 698 748 381 / 653 336 719',
     'email' => 'yabiahealthcenter@gmail.com',

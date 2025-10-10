@@ -228,12 +228,12 @@
                                 <div class="language dropdown">
                                     <button class="btn dropdown-toggle" type="button" id="dropdownMenu1"
                                         data-bs-toggle="dropdown" aria-expanded="false"><i
-                                            class="fa-solid fa-globe fa-fw"></i>{{ __('app.english') }} &nbsp;<span
+                                            class="fa-solid fa-globe fa-fw"></i>{{ app()->getLocale() == 'fr' ? __('app.french') : __('app.english') }} &nbsp;<span
                                             class="fa fa-angle-down"></span></button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="{{ url('lang/en') }}">{{ __('app.english') }}</a>
+                                        <li><a href="{{ route('change.lang', 'en') }}">{{ __('app.english') }}</a>
                                         </li>
-                                        <li><a href="{{ url('lang/fr') }}">{{ __('app.french') }}</a></li>
+                                        <li><a href="{{ route('change.lang', 'fr') }}">{{ __('app.french') }}</a></li>
                                     </ul>
                                 </div>
 

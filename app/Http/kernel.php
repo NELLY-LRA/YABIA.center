@@ -3,6 +3,14 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use App\Http\Middleware\TrustProxies;
+use App\Http\Middleware\PreventRequestsDuringMaintenance;
+use App\Http\Middleware\TrimStrings;
+use App\Http\Middleware\EncryptCookies;
+use App\Http\Middleware\VerifyCsrfToken;
+use App\Http\Middleware\Authenticate;
+use App\Http\Middleware\SetLocale;
+use App\Http\Middleware\RedirectIfAuthenticated;
 
 class Kernel extends HttpKernel
 {
@@ -57,5 +65,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'nocache' => \App\Http\Middleware\PreventCaching::class,
     ];
 }

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Middleware\SetLocale;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AppointmentController;
@@ -8,8 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 
 
 Route::get('lang/{locale}', function ($locale) {
@@ -20,6 +18,9 @@ Route::get('lang/{locale}', function ($locale) {
 
     // Enregistre la langue dans la session
     session(['locale' => $locale]);
+
+    // Applique immédiatement la locale
+    App::setLocale($locale);
 
     // Redirige vers la page précédente
     return redirect()->back();
