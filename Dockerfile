@@ -6,5 +6,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 RUN composer install --no-interaction --optimize-autoloader
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-EXPOSE 9000
-CMD ["php-fpm"]
+EXPOSE 10000
+CMD php artisan serve --host=0.0.0.0 --port=10000
