@@ -22,7 +22,7 @@ RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev --optimize-autoloader
 RUN chmod -R 775 storage bootstrap/cache
 
 # Exposer le port Render
-EXPOSE 10000
+EXPOSE $PORT
 
-# Commande finale (nettoyage + lancement du serveur)
-CMD php artisan config:clear && php artisan cache:clear && php artisan route:clear && php artisan serve --host=0.0.0.0 --port=10000
+# Commande finale
+CMD php artisan config:clear && php artisan cache:clear && php artisan route:clear && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
